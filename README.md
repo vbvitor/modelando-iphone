@@ -1,18 +1,39 @@
-## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+# Desafio de Projeto - POO
 
-## Folder Structure
 
-The workspace contains two folders by default, where:
+## Modelagem e Diagramação de um Componente iPhone
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Nesse desafio a proposta foi elaborar um diagrama de classes e interfaces utilizando uma ferramenta UML e implementalos em .java.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+```mermaid
+---
+title: Diagramação de Classes do iPhone
+---
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+classDiagram
+    
+    iPhone <|-- ReprodutorMusical
+    iPhone <|-- AparelhoTelefonico
+    iPhone <|-- NavegadorInternet
+    iPhone : +reprodutorMusical
+    iPhone : +aparelhoTelefonico
+    iPhone : +navegadorInternet 
+    class ReprodutorMusical{
+       +tocar()
+       +pausar()
+       +selecionarMusica("Dancing Queen - ABBA")
+    
+    }
+    class AparelhoTelefonico{
+        +ligar(99 9999-9999)
+        +atender()
+        +iniciarCorreioVoz()
+    
+    }
+    class NavegadorInternet{
+        +exibirPagina(https://www.coffee.com)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+```
